@@ -1,2 +1,2 @@
 # domaindumper
-Domain Dumper daily domains states
+Domain Dumper daily states of domains
