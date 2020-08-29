@@ -1,1 +1,1 @@
-[{"hostname":"nsp-anycast.cmc.iq","ipv4":"194.117.58.42","ipv6":"2001:500:14:8001:ad:0:0:42"},{"hostname":"ns1.cmc.iq","ipv4":"194.117.57.100"},{"hostname":"ns.cocca.fr","ipv4":"185.17.236.93","ipv6":"2a03:dd40:3:0:0:0:0:93"}]
+[{"hostname":"nsp-anycast.cmc.iq","ipv4":"194.117.58.42","ipv6":"2001:500:14:8001:ad:0:0:42"},{"hostname":"ns1.cmc.iq","ipv4":"194.117.57.100"},{"hostname":"ns.cocca.fr","ipv4":"185.17.236.93","ipv6":"2a03:dd40:3:0:0:0:0:93"},{"hostname":"iq.cctld.authdns.ripe.net","ipv4":"193.0.9.81","ipv6":"2001:67c:e0:0:0:0:0:81"}]
