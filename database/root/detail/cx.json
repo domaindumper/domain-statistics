@@ -1,1 +1,1 @@
-[{"hostname":"ns.anycast.nic.cx","ipv4":"204.61.216.16","ipv6":"2001:500:14:6016:ad:0:0:1"},{"hostname":"ns.cocca.fr","ipv4":"185.17.236.93","ipv6":"2a03:dd40:3:0:0:0:0:93"}]
+[{"hostname":"ns.anycast.nic.cx","ipv4":"204.61.216.16","ipv6":"2001:500:14:6016:ad:0:0:1"},{"hostname":"ns1.anycastdns.cz","ipv4":"185.38.108.108","ipv6":"2a00:fea0:dead:0:0:0:0:beef"},{"hostname":"ns2.anycastdns.cz","ipv4":"185.28.194.194"}]
