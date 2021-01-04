@@ -1,24 +1,5 @@
-title: Domain Dumper
-description: API for domains states
-url: https://api.domaindumper.com
-#baseurl: '/docs'
-lang: en	
-direction: auto
-theme: jekyll-rtd-theme
+title: Your awesome title
+lang: en
+description: Write an awesome description for your new site here
 
-
-# debug:
-#   compress: true
-#   dist: false
-#   shortcodes: true
-
-readme_index:
-  with_frontmatter: true
-
-plugins:
-  - jemoji
-  - jekyll-avatar
-  - jekyll-mentions
-
-exclude:
-  - CNAME
+remote_theme: rundocs/jekyll-rtd-theme
