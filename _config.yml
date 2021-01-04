@@ -1,6 +1,6 @@
 title: DomainDumper
 description: APi for domains states
-
+baseurl: docs
 theme: null
 
 # debug:
