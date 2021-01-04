@@ -1,6 +1,6 @@
 title: DomainDumper
 description: API for domains states
-url: 'https://api.domaindumper.com'
+url: https://api.domaindumper.com
 baseurl: '/docs'
 lang: en	
 direction: auto
