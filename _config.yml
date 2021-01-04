@@ -4,7 +4,7 @@ url: https://api.domaindumper.com
 baseurl: '/docs'
 lang: en	
 direction: auto
-theme: jekyll
+theme: rundocs
 
 # debug:
 #   compress: true
