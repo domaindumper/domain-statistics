@@ -1,5 +1,5 @@
 title: Domain Dumper
 lang: en
 description: API for domains state and Root NS Details
-
+source: '/docs'
 remote_theme: rundocs/jekyll-rtd-theme
