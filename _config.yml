@@ -1,5 +1,5 @@
-title: Your awesome title
+title: Domain Dumper
 lang: en
-description: Write an awesome description for your new site here
+description: API for domains state and Root NS Details
 
 remote_theme: rundocs/jekyll-rtd-theme
