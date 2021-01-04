@@ -1,7 +1,10 @@
 title: DomainDumper
 description: APi for domains states
-baseurl: docs
-theme: null
+url: api.domaindumper.com
+baseurl: /docs
+lang: en	
+direction: auto
+#theme: null
 
 # debug:
 #   compress: true
