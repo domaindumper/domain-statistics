@@ -1,0 +1,14 @@
+current directory: /var/www/vhosts/domaindumper.com/httpdocs/cron/domain_state/domaindumper/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
+/opt/plesk/ruby/2.6.3/bin/ruby -I /opt/plesk/ruby/2.6.3/lib64/ruby/2.6.0 -r ./siteconf20210104-23080-1t8d58m.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/vhosts/domaindumper.com/httpdocs/cron/domain_state/domaindumper/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
+make "DESTDIR=" clean
+
+current directory: /var/www/vhosts/domaindumper.com/httpdocs/cron/domain_state/domaindumper/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
+make "DESTDIR="
+compiling arena.c
+make: gcc: Command not found
+make: *** [arena.o] Error 127
+
+make failed, exit code 2

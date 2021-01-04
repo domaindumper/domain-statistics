@@ -1,0 +1,11 @@
+"gcc -o conftest -I/opt/plesk/ruby/2.3.8/include/ruby-2.3.0/x86_64-linux -I/opt/plesk/ruby/2.3.8/include/ruby-2.3.0/ruby/backward -I/opt/plesk/ruby/2.3.8/include/ruby-2.3.0 -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic conftest.c  -L. -L/opt/plesk/ruby/2.3.8/lib64 -Wl,-rpath,/opt/plesk/ruby/2.3.8/lib64 -L. -Wl,--enable-new-dtags -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -Wl,-rpath,/opt/plesk/ruby/2.3.8/lib64 -L/opt/plesk/ruby/2.3.8/lib64 -lruby-static  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
