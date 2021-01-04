@@ -30,7 +30,7 @@ url: "https://api.domaindumper.com" # the base hostname & protocol for your site
 
 # Social (First three Required)
 repo: "https://github.com/srapsware/domaindumper"
-github_user: ""
+github_user: "srapsware"
 github_repo: "domaindumper"
 
 # Optional
