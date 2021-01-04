@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full
 title: Docsy Jekyll Theme
 permalink: /
 ---
