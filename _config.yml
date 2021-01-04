@@ -1,10 +1,10 @@
 title: DomainDumper
-description: APi for domains states
-url: api.domaindumper.com
-baseurl: /docs
+description: API for domains states
+url: 'https://api.domaindumper.com'
+baseurl: '/docs'
 lang: en	
 direction: auto
-#theme: null
+theme: jekyll-rtd-theme
 
 # debug:
 #   compress: true
