@@ -1,0 +1,22 @@
+{
+    "name": "srapsware/domaindumper",
+    "description": "Domain's state API and root database",
+    "require": {
+        "php": ">=7.0",
+        "curl/curl": "^2.0"
+    }
+	"authors": [
+        {
+            "name": "Shiv Singh",
+            "email": "shiv@srapsware.com",
+            "homepage": "https://www.shivsingh.net",
+            "role": "Developer"
+        },
+        {
+            "name": "Shaz Abbasi",
+            "email": "a@bcd.ef",
+            "homepage": "https://www.facebook.com/asim.s.abbasi",
+            "role": "Developer"
+        }
+    ]
+}
