@@ -1,10 +1,14 @@
 {
     "name": "srapsware/domaindumper",
+	"type": "library",
     "description": "Domain's state API and root database",
+	"keywords": ["domain", "state", "root", "dns", "ns"],
+    "homepage": "https://www.domaindumper.com/",
+    "license": "MIT",
     "require": {
         "php": ">=7.0",
         "curl/curl": "^2.0"
-    }
+    },
 	"authors": [
         {
             "name": "Shiv Singh",
@@ -18,5 +22,11 @@
             "homepage": "https://www.facebook.com/asim.s.abbasi",
             "role": "Developer"
         }
-    ]
+    ],
+	"autoload": {
+        "psr-4": { "src\\Component\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
 }
