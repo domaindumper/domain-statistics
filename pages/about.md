@@ -6,9 +6,14 @@ permalink: /about/
 
 # About
 
-This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy jekyll theme, based
-on the Beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for
-native deployment on GitHub pages. See the [respository]({{ site.repo }}) for more details.
+We are a small team from India and work on big data analysis tool and development. We monitor all changes on DNS of every active domain on the Internet.
+
+Domain Dumper offer top class threat intelligence, cyber forensics, online fraud investigation, brand protection, domain research and regulatory compliance services. Protect your brand with Domain Dumper and find here deepest doamin data details and investigate ciber crimes online.
+
+DomainDumper monitor DNS changes including newly registered domains, deleted domains and domain transfers as well. We represent you the complete domain details with their most required information.
+
+We offer premium services specially for whois record, IP address recovery and internet fraud detection.
+[Check here](https://www.whoisextractor.in/) on whoisextractor.in
 
 ## Support
 
