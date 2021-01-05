@@ -42,12 +42,12 @@ dockerhub: srapsware
 feedback: true
 
 # Link to a privacy policy in footer, uncomment and define if wanted
-# privacy: https://domain.com/privacy
+privacy: https://www.domaindumper.com/privacy-policy/
 
 # google-analytics: UA-XXXXXXXXXX
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
-# logo: "assets/img/logo/SRCC-square-red.png"
+logo: "assets/img/new_logo.png"
 logo_pixels: 34
 color: "#30638e"
 # color: "#8c1515" # primary color for header, buttons
