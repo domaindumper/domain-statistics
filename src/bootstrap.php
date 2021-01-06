@@ -1,2 +1,5 @@
 <?php
-require __DIR__ .'/../vendor/autoload.php';
+function getNs()
+{
+    echo 'This will work';
+}
