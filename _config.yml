@@ -38,6 +38,14 @@ twitter: srapsware
 linkedin: srapsware
 dockerhub: srapsware
 
+
+#Home Set to readme
+
+readme_index:
+  enabled:          true
+  remove_originals: false
+  with_frontmatter: false
+
 # Should there be feedback buttons at the bottom of pages?
 feedback: true
 
