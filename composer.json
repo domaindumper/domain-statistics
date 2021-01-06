@@ -24,6 +24,7 @@
         }
     ],
 	"autoload": {
+	    "files": ["src/bootstrap.php"],
         "psr-4": {
             "DomainDumper\\": "src/"
         },
