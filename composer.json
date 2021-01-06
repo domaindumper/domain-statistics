@@ -28,5 +28,8 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+	"archive": {
+        "exclude": ["/_data", "/_docs", "/_includes", "/_layouts", "/_posts", "/pages"]
     }
 }
