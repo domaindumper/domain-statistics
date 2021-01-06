@@ -4,38 +4,23 @@ title: Domaindumper API
 permalink: /
 ---
 
-# Welcome to Docsy Jekyll
+![CI](https://github.com/rundocs/jekyll-rtd-theme/workflows/CI/badge.svg?branch=develop)
 
-This is a starter template for a docsy jekyll theme.
+Domain Dumper daily states of domains
 
-![assets/img/docsy-jekyll.png](assets/img/docsy-jekyll.png)
+API for stats for daily registered domains. Here you can get daily updates for how many domains registered on every TLD. we are updating our files in every 24 hours,
 
-## Purpose
+# How to use
+It's simple, we update states in JSON files, you only need to curl from its data directory.
 
-GitHub pages uses Jekyll natively, so when I make documentation, I typically
-look for Jekyll templates. Why? Using Jekyll means that I can use markdown,
-and allow for users to easily contribute, and build automatically just by
-way of pushing to a master branch (or general GitHub pages).
-I found Docsy, a beautiful Hugo template, but it requires hugo with GoLang
-which doesn't render natively on GitHub pages. For this reason, I've spent
-some time creating a custom Jekyll template that is (almost) as beautiful,
-and includes all the features that I might want.
+# Example:
 
-## Features
+Get domains stats from 15 July 2020
 
-What are these features? You should see the {% include doc.html name="Getting Started" path="getting-started" %}
-guide for a complete summary. Briefly:
+`curl https://api.domaindumper.com/database/stats/2020/07/15/stats.json`
 
- - *User interaction* including consistent permalinks, links to ask questions via GitHub issues, and edit the file on GitHub directly.
- - *Search* across posts, documentation, and other site pages, with an ability to exclude from search.
- - *External Search* meaning an ability to link any page tag to trigger an external search.
- - *Documentation* A documentation collection that was easy to organize on the filesystem, render with nested headings for the user, and refer to in markdown.
- - *Pages* A separate folder for more traditional pages (e.g, about).
- - *Navigation*: Control over the main navigation on the left of the page, and automatic generation of table of contents for each page on the right.
- - *News* A posts feed for news and updates, along with an archive (organized by year).
- - *Templates* or specifically, "includes" that make it easy to create an alert, documentation link, or other content.
- - *Continuous Integration* recipes to preview the site
+Please change your year, month and date according to your need. The file name will be always same.
 
+# Need premium services
 
-For features, getting started with development, see the {% include doc.html name="Getting Started" path="getting-started" %} page. Would you like to request a feature or contribute?
-[Open an issue]({{ site.repo }}/issues)
+if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information our other website: https://www.whoisextractor.in/
