@@ -24,7 +24,9 @@
         }
     ],
 	"autoload": {
-        "psr-4": { "src\\DomainDumper\\": "" },
+        "psr-4": {
+            "DomainDumper\\": "src/"
+        },
         "exclude-from-classmap": [
             "/Tests/"
         ]
