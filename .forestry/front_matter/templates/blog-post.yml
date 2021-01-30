@@ -17,5 +17,3 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
-pages:
-- _posts/2021-01-30-this-test-pos-from-forestry.md
