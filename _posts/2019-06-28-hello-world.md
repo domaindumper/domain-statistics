@@ -5,8 +5,8 @@ categories:
 - Updates
 - " News"
 badges:
-- type: warning
-   tag: warning-badge
+- type: "warning"
+   tag: "warning-badge"
 
 ---
 Wellcome 2021,
