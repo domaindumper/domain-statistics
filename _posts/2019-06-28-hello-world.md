@@ -2,11 +2,10 @@
 title: Welcome 2021 with 4 new database
 date: 2021-01-30 19:20:18 +0530
 categories:
-- Updates
-- " News"
+- News
+- " Updates"
 badges:
-- type: "warning"
-   tag: "warning-badge"
+- tag: ''
 
 ---
 Wellcome 2021,
