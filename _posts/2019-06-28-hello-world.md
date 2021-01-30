@@ -16,3 +16,5 @@ We have added these database for every day since 1990 July
 1. Registrar States
 2. Country Wise state of TLS
 3. Added all TLD details with root host name
+
+Thanks
