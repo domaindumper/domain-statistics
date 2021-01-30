@@ -1,11 +1,12 @@
 ---
 title: Getting Started
-tags: 
- - jekyll
- - github
-description: Getting started with Docsy Jekyll
----
+tags:
+- help
+- " start"
+- Getting started
+description: Getting started with Domain Dumper
 
+---
 # Getting Started
 
 ## Features
@@ -381,4 +382,3 @@ spot on the tags page linked above.
 #tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
 tag_color: primary # danger, success, warning, primary, info, secondary
 ```
-
