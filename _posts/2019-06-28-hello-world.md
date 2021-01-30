@@ -6,7 +6,7 @@ categories:
 - " News"
 badges:
 - tag: ''
-  type: waring
+  type: info
 
 ---
 
