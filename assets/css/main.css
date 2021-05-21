@@ -18602,3 +18602,6 @@ footer {
         visibility: hidden
     }
 }
+.navbar-logo > img {
+    height: 35px;
+}
