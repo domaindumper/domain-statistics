@@ -1,2 +1,11 @@
 [context.production.environment]
   HUGO_VERSION = "0.82.1"
+  
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+[[headers]]
+    for = "/*.json"
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
