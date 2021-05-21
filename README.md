@@ -9,9 +9,9 @@ It's simple, we update states in JSON files, you only need to curl from its data
 
 # Example:
 
-Get domains stats from 15 July 2020
+Get domains stats from 1 January 1990
 
-`curl https://api.domaindumper.com/database/stats/2020/07/15/stats.json`
+`curl https://api.domaindumper.com/database/stats/1990/01/01/stats.json`
 
 Please change your year, month and date according to your need. The file name will be always same.
 
