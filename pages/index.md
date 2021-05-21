@@ -24,4 +24,4 @@ Please change your year, month and date according to your need. The file name wi
 
 # Need premium services
 
-if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
+if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information on our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
