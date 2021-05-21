@@ -29,9 +29,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://api.domaindumper.com" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/srapsware/domaindumper"
-github_user: "srapsware"
-github_repo: "domaindumper"
+repo: "https://github.com/domaindumper/domain-statistics"
+github_user: "domaindumper"
+github_repo: "domain-statistics"
 
 # Optional
 twitter: srapsware
@@ -55,7 +55,7 @@ privacy: https://www.domaindumper.com/privacy-policy/
 # google-analytics: UA-XXXXXXXXXX
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
-logo: "assets/img/new_logo.png"
+logo: "assets/img/logo.png"
 logo_pixels: 34
 color: "#30638e"
 # color: "#8c1515" # primary color for header, buttons
