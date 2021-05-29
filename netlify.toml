@@ -10,7 +10,7 @@ package = "netlify-deployment-hours-plugin"
   # A cron-like expression that expresses when a deployment can occur
   expression = "* */3 * * *"
   # tz database value that expresses the timezone of the expression
-  timezone = "Asia/Kolkata"
+  timezone = "America/Toronto"
 
 [[headers]]
     for = "/*.json"
