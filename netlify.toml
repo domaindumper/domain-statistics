@@ -1,5 +1,13 @@
 [context.production.environment]
   HUGO_VERSION = "0.82.1"
+  
+[[plugins]]
+package = "netlify-deployment-hours-plugin"
+
+  [plugins.inputs]
+  contexts = "production"
+  expression = "* */3 * * *"
+  timezone = "Asia/Kolkata"
 
 [[headers]]
     for = "/*.json"
