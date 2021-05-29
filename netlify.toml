@@ -6,11 +6,11 @@ package = "netlify-deployment-hours-plugin"
 
   [plugins.inputs]
   # Optional: a comma-separated list of deploy contexts this plugin should monitor (default: "production")
-  contexts = "production"   # default value
+  #contexts = "production"   # default value
   # A cron-like expression that expresses when a deployment can occur
   expression = "* */3 * * *"
   # tz database value that expresses the timezone of the expression
-  timezone = "America/Toronto"
+  timezone = "Asia/Kolkata"
 
 [[headers]]
     for = "/*.json"
