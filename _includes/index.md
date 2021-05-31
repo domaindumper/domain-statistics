@@ -15,7 +15,7 @@ Get domains stats from 1 January 1990
 
 Get domains stats for today {{ site.time | date: '%d %B %Y' }}
 
-`curl https://api.domaindumper.com/database/stats/{{ site.time | date: '%Y/%b/%d' }}/stats.json`
+`curl https://api.domaindumper.com/database/stats/{{ site.time | date: '%Y/%m/%d' }}/stats.json`
 
 Note: Please change your year, month and date according to your need. The file name will be always same.
 
