@@ -18604,4 +18604,6 @@ footer {
 }
 .navbar-logo > img {
     height: 35px;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
