@@ -1,17 +1,15 @@
 ---
 title: Extras
-description: Extras, including quizzes.
+description: Extras, including registrar.
 tags:
- - survey
+ - registrar
 ---
 
 # Extras
 
-Extras include other integrations that aren't relevant to style or customization,
-but can further enhance your documentation pages. Currently, we have support
-for adding interactive quizzes.
+We parse all registrar state information according to daily registered domains. And we all provide separate states for all registered domain registrars.
 
- - [Quizzes](example-quiz)
+ - [Registrar](registrar)
 
 
 Would you like to see another question type, or another kind of extra? Please
