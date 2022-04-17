@@ -7,7 +7,7 @@ API for stats for daily registered domains. Here you can get daily updates for h
 # How to use
 It's simple, we update states in JSON files, you only need to curl from its data directory.
 
-# Example:
+# Example
 
 Get domains stats from 1 January 1990
 
@@ -19,6 +19,6 @@ Get domains stats for today {{ site.time | date: '%d %B %Y' }}
 
 Note: Please change your year, month and date according to your need. The file name will be always same.
 
-# Need premium services
+# Premium services
 
 if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information on our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
