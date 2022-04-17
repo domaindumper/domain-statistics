@@ -130,8 +130,8 @@ Here is an example (currently the active example):
     - title: "Extras"
       url: "docs/extras"
       children:
-        - title: Quizzes
-          url: "docs/extras/example-quiz"
+        - title: Registrars
+          url: "docs/extras/registrar"
     - title: "About"
       url: "about"
     - title: "News"
