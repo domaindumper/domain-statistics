@@ -8,13 +8,19 @@ description: Registrar states details in 2 ways
 We parse all registrar state information according to daily registered domains. And we all provide separate states for all registered domain registrars.
 
 
-# Daily states
+# Daily new states
 
 You can get daily states of registrar according to date by using below example:
 
 `https://api.domaindumper.com/database/stats/2020/10/18/registrar.json`
 
-In this date based information you will get : Registrar ID, Name, States and Share
+# Full deails
+
+Get top registrar details and uses:
+
+`https://api.domaindumper.com/database/registrar/registrars-details.json`
+
+In detailed information you will get : Registrar ID, Name, States, Share and upcoming Deletes.
 
 # Full details for single registrar
 
