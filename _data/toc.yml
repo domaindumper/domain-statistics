@@ -14,7 +14,7 @@
       url: "docs/extras"
       children:
         - title: Registrar
-          url: "/docs/extras/registrar"
+          url: "docs/extras/registrar"
         - title: Tags
           url: "tags"
     - title: "About"
