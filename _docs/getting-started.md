@@ -37,7 +37,7 @@ Note: Please change your year, month and date according to your need. The file n
 
 ## TLD Price comparison
 
-We do check all registrars to get cheap price in the market
+We do check all registrars to get the cheapest price in the market
 
 ### How to use
 
