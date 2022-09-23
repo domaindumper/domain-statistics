@@ -8,7 +8,7 @@ permalink: /about/
 
 We are a small team from India and work on big data analysis tool and development. We monitor all changes on DNS of every active domain on the Internet.
 
-Domain Dumper offer top class threat intelligence, cyber forensics, online fraud investigation, brand protection, domain research and regulatory compliance services. Protect your brand with Domain Dumper and find here deepest doamin data details and investigate ciber crimes online.
+Domain Dumper offer top class threat intelligence, cyber forensics, online fraud investigation, brand protection, domain research and regulatory compliance services. Protect your brand with Domain Dumper and find here deepest domain data details and investigate ciber crimes online.
 
 DomainDumper monitor DNS changes including newly registered domains, deleted domains and domain transfers as well. We represent you the complete domain details with their most required information.
 
