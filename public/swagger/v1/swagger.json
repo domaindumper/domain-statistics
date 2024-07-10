@@ -34,7 +34,7 @@
   ],
   "schemes": ["https", "http"],
   "paths": {
-    "/registrars.json": {
+    "/registrar/registrars.json": {
       "get": {
         "tags": ["registrar"],
         "summary": "get registrar list",
@@ -50,7 +50,7 @@
         "security": [{ "petstore_auth": ["write:pets", "read:pets"] }]
       }
     },
-    "/registrars-details.json": {
+    "/registrar/registrars-details.json": {
       "get": {
         "tags": ["registrar"],
         "summary": "get registrar detailed list",
