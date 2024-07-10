@@ -4,7 +4,7 @@ import 'server-only';
 
 export const getApiDocs = async () => {
   const spec = createSwaggerSpec({
-    apiFolder: 'app/api',
+    apiFolder: 'app/api2',
     definition: {
       openapi: '3.0.0',
       info: {
