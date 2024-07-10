@@ -1,7 +1,0 @@
-[[params.versions]]
-  version = "v 1.0"
-  url = "https://api.domaindumper.com/"
-
-[[params.versions]]
-  version = "v 1.2"
-  url = "https://api.domaindumper.com/1.2/"
