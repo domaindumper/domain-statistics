@@ -8,5 +8,5 @@ export default async function IndexPage() {
     <section className="container">
       <ReactSwagger spec={spec} />
     </section>
-  );
+  ); 
 }
