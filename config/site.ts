@@ -3,20 +3,20 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'd. Dump',
   description:
-    'Demo App for Next13 Swagger UI, Next13 Swagger UI is a Next.js component that renders Swagger UI in your Next.js app.',
+    'API documentation of DomainDumper for all about domains states.',
   mainNav: [
     {
       title: 'Home',
       href: '/',
     },
     {
-      title: 'Doc',
+      title: 'API Doc',
       href: '/api-doc',
     },
   ],
   links: {
-    twitter: 'https://twitter.com/jellydn',
-    github: 'https://github.com/jellydn/next-swagger-doc',
-    docs: 'https://next-swagger-doc.productsway.com',
+    twitter: 'https://twitter.com/domaindumper',
+    github: 'https://github.com/domaindumper/domain-statistics',
+    docs: 'https://statistics.domaindumper.com/api-doc',
   },
 };
