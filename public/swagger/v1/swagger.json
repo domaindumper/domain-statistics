@@ -150,7 +150,7 @@
         }
       }
     },
-    "/stats/detail/{Year}/{Month}/{Date}/country.json": {
+    "/stats/{Year}/{Month}/{Date}/country.json": {
       "get": {
         "tags": [
           "stats"
