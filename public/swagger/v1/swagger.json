@@ -128,7 +128,8 @@
           {
             "name": "TldName",
             "in": "path",
-            "description": "name of TLD. ",
+            "description": "Name of TLD. ",
+            "example": "Ex.: com or net",
             "required": true,
             "type": "string"
           }
