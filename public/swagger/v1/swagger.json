@@ -111,7 +111,7 @@
         }
       }
     },
-    "/root/detail/aaa/aaa.json": {
+    "/root/detail/{TldName}/{TldName}.json": {
       "get": {
         "tags": [
           "root"
@@ -123,6 +123,15 @@
         ],
         "produces": [
           "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "TldName",
+            "in": "path",
+            "description": "The name that needs to be fetched. Use user1 for testing. ",
+            "required": true,
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {
