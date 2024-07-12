@@ -140,6 +140,12 @@
             "schema": {
               "$ref": "#/definitions/ApiResponse"
             }
+          },
+          "404": {
+            "description": "tld name not correct",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
           }
         }
       }
