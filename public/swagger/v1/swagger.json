@@ -129,7 +129,7 @@
             "name": "TldName",
             "in": "path",
             "description": "Name of TLD. ",
-            "example": "Ex.: com or net",
+            "example": "com or net, See Complete list: https://statistics.domaindumper.com/api/v1/root/db.json",
             "required": true,
             "type": "string"
           }
