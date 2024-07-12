@@ -35,6 +35,14 @@
         "description": "Find out more about our store",
         "url": "https://www.domaindumper.com"
       }
+    },
+    {
+      "name": "tlds",
+      "description": "All TLD List",
+      "externalDocs": {
+        "description": "List of all tlds",
+        "url": "https://www.domaindumper.com"
+      }
     }
   ],
   "schemes": [
@@ -308,6 +316,29 @@
           },
           "404": {
             "description": "failed operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          }
+        }
+      }
+    },
+    "/tlds/tlds_list.json": {
+      "get": {
+        "tags": [
+          "tlds"
+        ],
+        "summary": "get registrars list",
+        "description": "Get a complete list of registrar",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
             "schema": {
               "$ref": "#/definitions/ApiResponse"
             }
