@@ -10,7 +10,7 @@ export default function IndexPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
         All possible domain states
         </h1>
-        <p className="text-muted-foreground max-w-[700px] text-lg">We generate all possible states of domain registration, expiration, and deletion. We include the list of root registrar and root name server as well. These APIs are available for free use in any project. If you need premium services, then check our paid services at: https://www.domaindumper.com</p>
+        <p className="text-muted-foreground max-w-[700px] text-lg">We provide comprehensive APIs to generate all possible domain registration, expiration, and deletion states, including root registrar and root name server data. These APIs are free to use for any project. For premium services, explore our offerings at: https://www.domaindumper.com.</p>
         <p className="text-muted-foreground max-w-[700px] text-lg">
           Click on <Link href={'/api-doc'}>Doc</Link> to see the swagger UI.
         </p>
