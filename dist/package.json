@@ -1,14 +1,14 @@
 {
-  "name": "builtwithlistapidemo",
+  "name": "domain-dumper-statics",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gary Brewer",
+  "author": "Shiv Singh",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.2"
   },
-  "description": ""
+  "description": "Lib to get domain Statics"
 }
