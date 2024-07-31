@@ -1,5 +1,5 @@
 {
-  "name": "domain-dumper-statics",
+  "name": "@nomadprogrammer/domain-dumper-statics",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
@@ -13,5 +13,19 @@
   "description": "Library to get domain Statistics",
   "publishConfig": {
     "@nomadprogrammer:registry": "https://npm.pkg.github.com"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domaindumper/domain-statistics.git"
+  },
+  "keywords": [
+    "statistics",
+    "for",
+    "domains"
+  ],
+  "bugs": {
+    "url": "https://github.com/domaindumper/domain-statistics/issues"
+  },
+  "homepage": "https://github.com/domaindumper/domain-statistics#readme"
 }
