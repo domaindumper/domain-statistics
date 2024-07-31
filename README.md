@@ -2,18 +2,10 @@
 
 Domain Dumper daily states of domains
 
-API for stats for daily registered domains. Here you can get daily updates for how many domains registered on every TLD. we are updating our files in every 24 hours,
+An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.
 
 # How to use
-It's simple, we update states in JSON files, you only need to curl from its data directory.
-
-# Example:
-
-Get domains stats from 1 January 1990
-
-`curl https://api.domaindumper.com/database/stats/1990/01/01/stats.json`
-
-Please change your year, month and date according to your need. The file name will be always same.
+All documentation moved to under this url: [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/)
 
 # Need premium services
 
