@@ -4,9 +4,7 @@ Domain Dumper daily states of domains
 
 An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.
 
-# How to use
-
-## Installing
+## How to use
 
 ### Package manager
 
@@ -58,6 +56,6 @@ console.log(domaindumper.isCancel('something'));
 
 All documentation moved to under this url: [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/)
 
-# Need premium services
+## Need premium services
 
 if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information on our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
