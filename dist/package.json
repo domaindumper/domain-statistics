@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/domaindumper/domain-statistics/issues"
   },
-  "homepage": "https://github.com/domaindumper/domain-statistics#readme"
+  "homepage": "https://github.com/domaindumper/domain-statistics#readme",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
 }
