@@ -1,6 +1,6 @@
 {
   "name": "domaindumper-domain-statistics",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.",
   "main": "main.js",
   "scripts": {
