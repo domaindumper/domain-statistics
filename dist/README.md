@@ -42,6 +42,7 @@ const domaindumper = require('domaindumper');
 
 console.log(domaindumper.isCancel('something'));
 ```
+## More example
 
 All documentation moved to under this url: [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/)
 
