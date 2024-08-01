@@ -15,22 +15,10 @@ Using npm:
 $ npm install domaindumper
 ```
 
-Using bower:
-
-```bash
-$ bower install domaindumper
-```
-
 Using yarn:
 
 ```bash
 $ yarn add domaindumper
-```
-
-Using pnpm:
-
-```bash
-$ pnpm add domaindumper
 ```
 
 Once the package is installed, you can import the library using `import` or `require` approach:
