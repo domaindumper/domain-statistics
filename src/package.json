@@ -1,31 +1,26 @@
 {
-  "name": "@nomadprogrammer/domain-dumper-statics",
-  "version": "1.0.0",
+  "name": "domaindumper-domain-statistics",
+  "version": "1.1.2",
+  "description": "An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "exit 0"
   },
-  "author": "Shiv Singh",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.2"
-  },
-  "description": "Library to get domain Statistics",
-  "publishConfig": {
-    "@nomadprogrammer:registry": "https://npm.pkg.github.com"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/domaindumper/domain-statistics.git"
   },
   "keywords": [
-    "statistics",
-    "for",
-    "domains"
+    "domaindumper",
+    "domain-statistics"
   ],
+  "author": "Nomad Programmer",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/domaindumper/domain-statistics/issues"
   },
-  "homepage": "https://github.com/domaindumper/domain-statistics#readme"
+  "homepage": "https://github.com/domaindumper/domain-statistics#readme",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
 }
