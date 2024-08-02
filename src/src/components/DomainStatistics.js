@@ -19,5 +19,5 @@ export const DomainStatistics = (yyyy, mm, dd) => {
     .finally(function () {
       // always executed
     });
-  return "Test";
+  //return "Test";
 };
