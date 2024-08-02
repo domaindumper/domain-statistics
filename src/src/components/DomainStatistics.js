@@ -7,7 +7,7 @@ export const DomainStatistics = (yyyy, mm, dd) => {
 
   APIEndPoint = APIEndPoint + "/stats/2024/07/02/stats.json";
   axios
-    .get("/user?ID=12345")
+    .get(APIEndPoint)
     .then(function (response) {
       // handle success
       console.log(response);
