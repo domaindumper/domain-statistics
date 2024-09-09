@@ -8,7 +8,7 @@ export const Icons = {
   moon: Moon,
   twitter: Twitter,
   logo: (props: LucideProps) => (
-    <svg height="40" width="250" xmlns="http://www.w3.org/2000/svg">
+    <svg height="40" width="145" xmlns="http://www.w3.org/2000/svg">
   <text x="5" y="30" fill="#007bff" font-size="35" font-weight="bold" text-decoration="underline" >d.
     <tspan fill="#007bff">dump</tspan>
   </text>
