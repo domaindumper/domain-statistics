@@ -1,51 +1,63 @@
-[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://badge.fury.io/js/domaindumper) 
+# Domain Dumper
+
+[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://badge.fury.io/js/domaindumper)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eadf929b-e093-4a1a-b449-9eb62242aff9/deploy-status)](https://app.netlify.com/sites/domaindumper/deploys)
 
-Domain Dumper daily states of domains
+Domain Dumper delivers daily updates on the statistics of all registered domains across 900+ zones, with records dating back to January 1, 1990. This API provides daily updates on the number of domains registered on each TLD and updates its files every 24 hours.
 
-An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.
+## Features
 
-## How to use
+* **Daily domain registration statistics:**  Access data on the number of domains registered daily for each TLD.
+* **Regular updates:** Data is refreshed every 24 hours, ensuring you have access to the latest information.
+* **Easy integration:**  Simple to use API for seamless integration into your projects.
 
-### Package manager
+## Installation
+You can install the domaindumper package using npm or yarn.
 
-Using npm:
-
-```bash
-$ npm install domaindumper
-```
-
-Using yarn:
+**Using npm:**
 
 ```bash
-$ yarn add domaindumper
-```
-
-Once the package is installed, you can import the library using `import` or `require` approach:
-
-```js
-import domaindumper, {isCancel, domaindumperError} from 'domaindumper';
-```
-
-You can also use the default export, since the named export is just a re-export from the domaindumper factory:
-
-```js
-import domaindumper from 'domaindumper';
-
-console.log(domaindumper.isCancel('something'));
+npm install domaindumper
 ````
 
-If you use `require` for importing, **only default export is available**:
+**Using yarn:**
 
-```js
+```bash
+yarn add domaindumper
+```
+
+## Usage
+Once the package is installed, you can import the library using either the import or require approach.
+
+**Using ES6 import:**
+
+```javascript
+import domaindumper, { isCancel, domaindumperError } from 'domaindumper';
+
+console.log(domaindumper.isCancel('something'));
+```
+
+**Using CommonJS require**
+If you use require for importing, only the default export is available:
+
+
+```javascript
 const domaindumper = require('domaindumper');
 
 console.log(domaindumper.isCancel('something'));
 ```
-## More example
 
-All documentation moved to under this url: [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/)
+**Note:** For detailed documentation and examples, please visit [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/).
 
-## Need premium services
 
-if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information on our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
+## Premium Services
+
+For premium services like domain Whois information or free daily lists of registered domain names, please visit [Whois Extractor](https://www.whoisextractor.in/).
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
