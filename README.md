@@ -8,6 +8,8 @@ Domain Dumper delivers daily updates on the statistics of all registered domains
 ## Table of Contents
 
 - [Installation](#installation)
+  - [Using npm](#using-npm)
+  - [Using yarn](#using-yarn)
 - [Usage](#usage)
   - [Importing the Library](#importing-the-library)
 - [Examples](#examples)
