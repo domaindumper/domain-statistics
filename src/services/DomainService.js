@@ -5,18 +5,31 @@ class DomainService {
     this.baseURL = 'https://statistics.domaindumper.com/api/v1';
     this.client = axios.create({
       baseURL: this.baseURL,
-      timeout: 10000
+      timeout: 10000,
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
     });
   }
 
-  async fetchRegistrars() {
-    const response = await this.client.get('/registrar/registrars.json');
-    return response.data;
+  // Registrar endpoints
+  async getRegistrarsDetails() {
+    try {
+      const response = await this.client.get('/registrar/registrars-details.json');
+      return response.data;
+    } catch (error) {
+      throw this.handleError(error);
+    }
   }
 
-  async fetchRegistrarsDetails() {
-    const response = await this.client.get('/registrar/registrars-details.json');
-    return response.data;
+  async getRegistrarsList() {
+    try {
+      const response = await this.client.get('/registrar/registrars.json');
+      return response.data;
+    } catch (error) {
+      throw this.handleError(error);
+    }
   }
 
   async fetchRootDatabase() {
@@ -44,9 +57,21 @@ class DomainService {
     };
   }
 
-  async fetchTldsList() {
-    const response = await this.client.get('/tlds/tlds_list.json');
-    return response.data;
+  async getTldsList() {
+    try {
+      const response = await this.client.get('/tlds/tlds_list.json');
+      return response.data;
+    } catch (error) {
+      throw this.handleError(error);
+    }
+  }
+
+  // Error handling
+  handleError(error) {
+    if (error.response) {
+      return new Error(error.response.data.message || 'API Error');
+    }
+    return new Error('Network Error');
   }
 }
 

@@ -2,7 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/domaindumper.svg)](https://www.npmjs.com/package/domaindumper)
 [![GitHub license](https://img.shields.io/github/license/domaindumper/domain-statistics)](https://github.com/domaindumper/domain-statistics/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/domaindumper/domain-statistics)](https://github.com/domaindumper/domain-statistics/issues)
 
 A JavaScript library for accessing domain registration statistics via the DomainDumper API.
 
@@ -14,30 +13,32 @@ npm install domaindumper
 
 ## Features
 
-- Fetch registrar information
-- Get TLD (Top Level Domain) details
+- Fetch registrar information and details
+- Get TLD (Top Level Domain) details and lists
 - Access domain registration statistics
 - Country-based domain statistics
-- Registrar-based statistics
-- TLD-based statistics
+- Root zone database access
+- Comprehensive error handling
 
-## Usage
+## Quick Start
 
 ```javascript
 import { 
-  getRegistrars, 
-  getTldDetails, 
-  getDomainStats 
+  getRegistrarsList,
+  getRegistrarsDetails,
+  getTldDetails,
+  getTldsList,
+  getDomainStats,
+  getRootDatabase
 } from 'domaindumper';
 
-// Get registrars list
-const registrars = await getRegistrars();
+// Get registrars information
+const registrars = await getRegistrarsList();
+const registrarDetails = await getRegistrarsDetails();
 
-// Get TLD details for .com
+// Get TLD information
+const tldsList = await getTldsList();
 const comDetails = await getTldDetails('com');
-
-// Get domain stats for specific date
-const stats = await getDomainStats('2024', '02', '19');
 ```
 
 ## API Reference
@@ -56,6 +57,82 @@ const stats = await getDomainStats('2024', '02', '19');
 console.log(stats.countryStats);    // Country-based statistics
 console.log(stats.registrarStats);  // Registrar-based statistics
 console.log(stats.tldStats);        // TLD-based statistics
+```
+
+## API Examples
+
+```javascript
+import { 
+  getRegistrars,
+  getRegistrarsDetails, 
+  getTldDetails,
+  getDomainStats,
+  getRootDatabase,
+  getTldsList 
+} from 'domaindumper';
+
+// Get registrars list
+const registrars = await getRegistrars();
+
+// Get detailed registrar information
+const details = await getRegistrarsDetails();
+
+// Get TLD details
+const tldInfo = await getTldDetails('com');
+
+// Get domain statistics
+const stats = await getDomainStats('2024', '02', '19');
+console.log({
+  countryStats: stats.countryStats,     // Country-based statistics
+  registrarStats: stats.registrarStats, // Registrar-based statistics
+  tldStats: stats.tldStats             // TLD-based statistics
+});
+
+// Get root zone database
+const rootDb = await getRootDatabase();
+
+// Get all TLDs list
+const tldsList = await getTldsList();
+```
+
+### Response Examples
+
+```javascript
+// Registrars response
+{
+  registrars: [
+    { id: 1, name: "Example Registrar", url: "https://example.com" }
+  ]
+}
+
+// TLD details response
+{
+  name: "com",
+  type: "generic",
+  manager: "VeriSign Global Registry Services",
+  rootServers: ["a.gtld-servers.net", "b.gtld-servers.net"]
+}
+
+// Domain stats response
+{
+  countryStats: { US: 1000000, GB: 500000 },
+  registrarStats: { "1": 100000, "2": 50000 },
+  tldStats: { com: 2000000, net: 1000000 }
+}
+```
+
+### Error Handling
+
+```javascript
+try {
+  const stats = await getDomainStats('2024', '02', '19');
+} catch (error) {
+  if (error.response) {
+    console.error('API Error:', error.response.data.message);
+  } else {
+    console.error('Network Error:', error.message);
+  }
+}
 ```
 
 ## Testing
@@ -91,17 +168,11 @@ To run tests:
 npm test
 ```
 
-## Repository
-
-- GitHub: [https://github.com/domaindumper/domain-statistics](https://github.com/domaindumper/domain-statistics)
-- Issues: [https://github.com/domaindumper/domain-statistics/issues](https://github.com/domaindumper/domain-statistics/issues)
-- Pull Requests: [https://github.com/domaindumper/domain-statistics/pulls](https://github.com/domaindumper/domain-statistics/pulls)
-
 ## Development
 
 ### Setup
 ```bash
-git clone https://github.com/domaindumper/domain-statistics.git
+git clone https://github.com/yourusername/domain-statistics.git
 cd domain-statistics
 npm install
 ```
@@ -123,29 +194,20 @@ try {
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/domaindumper/domain-statistics/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Security
-
-For security issues, please email security@domaindumper.com instead of using the issue tracker.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/domaindumper/domain-statistics/blob/main/LICENSE) file for details.
+MIT License - see LICENSE file for details
 
 ## Support
 
-- Documentation: [https://statistics.domaindumper.com/docs](https://statistics.domaindumper.com/docs)
-- Email: support@domaindumper.com
-- Issues: [GitHub Issues](https://github.com/domaindumper/domain-statistics/issues)
+For support, email support@domaindumper.com or open an issue in our GitHub repository.
 
 ## Credits
 
-- Data provided by [DomainDumper](https://www.domaindumper.com)
-- Maintained by the [DomainDumper Team](https://github.com/domaindumper)
+Data provided by [DomainDumper](https://www.domaindumper.com)
