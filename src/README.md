@@ -1,6 +1,8 @@
 # DomainDumper
 
 [![npm version](https://badge.fury.io/js/domaindumper.svg)](https://www.npmjs.com/package/domaindumper)
+[![GitHub license](https://img.shields.io/github/license/domaindumper/domain-statistics)](https://github.com/domaindumper/domain-statistics/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/domaindumper/domain-statistics)](https://github.com/domaindumper/domain-statistics/issues)
 
 A JavaScript library for accessing domain registration statistics via the DomainDumper API.
 
@@ -89,11 +91,17 @@ To run tests:
 npm test
 ```
 
+## Repository
+
+- GitHub: [https://github.com/domaindumper/domain-statistics](https://github.com/domaindumper/domain-statistics)
+- Issues: [https://github.com/domaindumper/domain-statistics/issues](https://github.com/domaindumper/domain-statistics/issues)
+- Pull Requests: [https://github.com/domaindumper/domain-statistics/pulls](https://github.com/domaindumper/domain-statistics/pulls)
+
 ## Development
 
 ### Setup
 ```bash
-git clone https://github.com/yourusername/domain-statistics.git
+git clone https://github.com/domaindumper/domain-statistics.git
 cd domain-statistics
 npm install
 ```
@@ -115,20 +123,29 @@ try {
 
 ## Contributing
 
+Please read [CONTRIBUTING.md](https://github.com/domaindumper/domain-statistics/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## Security
+
+For security issues, please email security@domaindumper.com instead of using the issue tracker.
+
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/domaindumper/domain-statistics/blob/main/LICENSE) file for details.
 
 ## Support
 
-For support, email support@domaindumper.com or open an issue in our GitHub repository.
+- Documentation: [https://statistics.domaindumper.com/docs](https://statistics.domaindumper.com/docs)
+- Email: support@domaindumper.com
+- Issues: [GitHub Issues](https://github.com/domaindumper/domain-statistics/issues)
 
 ## Credits
 
-Data provided by [DomainDumper](https://www.domaindumper.com)
+- Data provided by [DomainDumper](https://www.domaindumper.com)
+- Maintained by the [DomainDumper Team](https://github.com/domaindumper)

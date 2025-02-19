@@ -1,6 +1,6 @@
 {
   "name": "domaindumper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Domain registration statistics API wrapper",
   "main": "dist/index.js",
   "scripts": {
@@ -25,5 +25,14 @@
   ],
   "keywords": ["domain", "statistics", "api", "tld"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domaindumper/domain-statistics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/domaindumper/domain-statistics/issues",
+    "email": "support@domaindumper.com"
+  },
+  "homepage": "https://statistics.domaindumper.com"
 }
