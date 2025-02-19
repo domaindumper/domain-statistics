@@ -1,70 +1,132 @@
-# Domain Dumper
+# Domain Statistics
 
-[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://badge.fury.io/js/domaindumper)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eadf929b-e093-4a1a-b449-9eb62242aff9/deploy-status)](https://app.netlify.com/sites/domaindumper/deploys)
-
-Domain Dumper delivers daily updates on the statistics of all registered domains across 900+ zones, with records dating back to January 1, 1990. This API provides daily updates on the number of domains registered on each TLD and updates its files every 24 hours.
-
-## Table of Contents
-
-- [Installation](#installation)
-  - [Using npm](#using-npm)
-  - [Using yarn](#using-yarn)
-- [Usage](#usage)
-  - [Importing the Library](#importing-the-library)
-- [Examples](#examples)
-- [Documentation](#documentation)
-- [Premium Services](#premium-services)
-- [License](#license)
+A JavaScript library for accessing domain registration statistics via the DomainDumper API.
 
 ## Installation
 
-You can install the `domaindumper` package using npm or yarn.
-
-### Using npm
-
 ```bash
-npm install domaindumper
+npm install domain-statistics
 ```
 
-### Using yarn
+## Features
 
-```bash
-yarn add domaindumper
-```
+- Fetch registrar information
+- Get TLD (Top Level Domain) details
+- Access domain registration statistics
+- Country-based domain statistics
+- Registrar-based statistics
+- TLD-based statistics
 
-## Usage
-
-Once the package is installed, you can import the library using either the `import` or `require` approach.
-
-### Importing the Library
-
-#### Using ES6 `import`
+## Quick Start
 
 ```javascript
-import domaindumper, { isCancel, domaindumperError } from 'domaindumper';
+import { 
+  getRegistrars, 
+  getTldDetails, 
+  getDomainStats 
+} from 'domain-statistics';
 
-console.log(domaindumper.isCancel('something'));
+// Get registrars list
+const registrars = await getRegistrars();
+
+// Get TLD details for .com
+const comDetails = await getTldDetails('com');
+
+// Get domain stats for specific date
+const stats = await getDomainStats('2024', '02', '19');
 ```
 
-#### Using CommonJS `require`
+## API Reference
 
-If you use `require` for importing, only the default export is available:
+### Domain Service Methods
 
 ```javascript
-const domaindumper = require('domaindumper');
+// Get list of registrars
+const registrars = await getRegistrars();
 
-console.log(domaindumper.isCancel('something'));
+// Get detailed TLD information
+const tldInfo = await getTldDetails('com');
+
+// Get domain statistics for specific date
+const stats = await getDomainStats('2024', '02', '19');
+console.log(stats.countryStats);    // Country-based statistics
+console.log(stats.registrarStats);  // Registrar-based statistics
+console.log(stats.tldStats);        // TLD-based statistics
 ```
 
-## Examples
+## Testing
 
-For more examples and detailed usage, please visit our documentation at [Domain Dumper Statistics](https://statistics.domaindumper.com/).
+The package includes comprehensive tests. Here's an example of our test suite:
 
-## Premium Services
+```javascript
+import DomainService from '../services/DomainService';
 
-If you need premium services like domain WHOIS or free daily registered domain names, you can find this information on our other website: [Whois Extractor](https://www.whoisextractor.in/).
+describe('DomainService', () => {
+  test('fetchRegistrars returns registrar data', async () => {
+    const data = await DomainService.fetchRegistrars();
+    expect(data).toBeDefined();
+  });
+
+  test('fetchTldDetails returns TLD information', async () => {
+    const data = await DomainService.fetchTldDetails('com');
+    expect(data).toBeDefined();
+  });
+
+  test('fetchDomainStats returns all stats types', async () => {
+    const stats = await DomainService.fetchDomainStats('2024', '02', '19');
+    expect(stats.countryStats).toBeDefined();
+    expect(stats.registrarStats).toBeDefined();
+    expect(stats.tldStats).toBeDefined();
+  });
+});
+```
+
+To run tests:
+
+```bash
+npm test
+```
+
+## Development
+
+### Setup
+```bash
+git clone https://github.com/yourusername/domain-statistics.git
+cd domain-statistics
+npm install
+```
+
+### Building
+```bash
+npm run build
+```
+
+## Error Handling
+
+```javascript
+try {
+  const stats = await getDomainStats('2024', '02', '19');
+} catch (error) {
+  console.error('Error fetching domain stats:', error.message);
+}
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
+
+## Support
+
+For support, email support@domaindumper.com or open an issue in our GitHub repository.
+
+## Credits
+
+Data provided by [DomainDumper](https://www.domaindumper.com)

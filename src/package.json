@@ -1,27 +1,29 @@
 {
-  "name": "domaindumper",
-  "version": "1.0.5",
-  "description": "An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.",
-  "main": "main.js",
+  "name": "domain-statistics",
+  "version": "1.0.0",
+  "description": "Domain registration statistics API wrapper",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "jest",
+    "build": "babel src -d dist",
+    "prepare": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/domaindumper/domain-statistics.git"
-  },
-  "keywords": [
-    "domaindumper",
-    "domain-statistics"
-  ],
-  "author": "Nomad Programmer",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/domaindumper/domain-statistics/issues"
-  },
-  "homepage": "https://statistics.domaindumper.com/",
   "dependencies": {
-    "axios": "^1.7.2",
-    "react": "^18.3.1"
-  }
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "jest": "^29.7.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": ["domain", "statistics", "api", "tld"],
+  "author": "",
+  "license": "MIT"
 }
