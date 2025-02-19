@@ -1,6 +1,6 @@
 {
-  "name": "domain-statistics",
-  "version": "1.0.0",
+  "name": "domaindumper",
+  "version": "1.0.7",
   "description": "Domain registration statistics API wrapper",
   "main": "dist/index.js",
   "scripts": {

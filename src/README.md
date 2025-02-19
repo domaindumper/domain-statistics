@@ -1,51 +1,134 @@
-[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://badge.fury.io/js/domaindumper) 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eadf929b-e093-4a1a-b449-9eb62242aff9/deploy-status)](https://app.netlify.com/sites/domaindumper/deploys)
+# DomainDumper
 
-Domain Dumper daily states of domains
+[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://www.npmjs.com/package/domaindumper)
 
-An API that provides statistics for domains that are registered every day. Here you can get daily updates on how many domains are registered on each TLD. We update our files every 24 hours.
+A JavaScript library for accessing domain registration statistics via the DomainDumper API.
 
-## How to use
-
-### Package manager
-
-Using npm:
+## Installation
 
 ```bash
-$ npm install domaindumper
+npm install domaindumper
 ```
 
-Using yarn:
+## Features
+
+- Fetch registrar information
+- Get TLD (Top Level Domain) details
+- Access domain registration statistics
+- Country-based domain statistics
+- Registrar-based statistics
+- TLD-based statistics
+
+## Usage
+
+```javascript
+import { 
+  getRegistrars, 
+  getTldDetails, 
+  getDomainStats 
+} from 'domaindumper';
+
+// Get registrars list
+const registrars = await getRegistrars();
+
+// Get TLD details for .com
+const comDetails = await getTldDetails('com');
+
+// Get domain stats for specific date
+const stats = await getDomainStats('2024', '02', '19');
+```
+
+## API Reference
+
+### Domain Service Methods
+
+```javascript
+// Get list of registrars
+const registrars = await getRegistrars();
+
+// Get detailed TLD information
+const tldInfo = await getTldDetails('com');
+
+// Get domain statistics for specific date
+const stats = await getDomainStats('2024', '02', '19');
+console.log(stats.countryStats);    // Country-based statistics
+console.log(stats.registrarStats);  // Registrar-based statistics
+console.log(stats.tldStats);        // TLD-based statistics
+```
+
+## Testing
+
+The package includes comprehensive tests. Here's an example of our test suite:
+
+```javascript
+import DomainService from '../services/DomainService';
+
+describe('DomainService', () => {
+  test('fetchRegistrars returns registrar data', async () => {
+    const data = await DomainService.fetchRegistrars();
+    expect(data).toBeDefined();
+  });
+
+  test('fetchTldDetails returns TLD information', async () => {
+    const data = await DomainService.fetchTldDetails('com');
+    expect(data).toBeDefined();
+  });
+
+  test('fetchDomainStats returns all stats types', async () => {
+    const stats = await DomainService.fetchDomainStats('2024', '02', '19');
+    expect(stats.countryStats).toBeDefined();
+    expect(stats.registrarStats).toBeDefined();
+    expect(stats.tldStats).toBeDefined();
+  });
+});
+```
+
+To run tests:
 
 ```bash
-$ yarn add domaindumper
+npm test
 ```
 
-Once the package is installed, you can import the library using `import` or `require` approach:
+## Development
 
-```js
-import domaindumper, {isCancel, domaindumperError} from 'domaindumper';
+### Setup
+```bash
+git clone https://github.com/yourusername/domain-statistics.git
+cd domain-statistics
+npm install
 ```
 
-You can also use the default export, since the named export is just a re-export from the domaindumper factory:
-
-```js
-import domaindumper from 'domaindumper';
-
-console.log(domaindumper.isCancel('something'));
-````
-
-If you use `require` for importing, **only default export is available**:
-
-```js
-const domaindumper = require('domaindumper');
-
-console.log(domaindumper.isCancel('something'));
+### Building
+```bash
+npm run build
 ```
-## More example
 
-All documentation moved to under this url: [https://statistics.domaindumper.com/](https://statistics.domaindumper.com/)
+## Error Handling
 
-## Need premium services
+```javascript
+try {
+  const stats = await getDomainStats('2024', '02', '19');
+} catch (error) {
+  console.error('Error fetching domain stats:', error.message);
+}
+```
 
-if you need premium services like domains Whois OR Free daily registered domain names, then you can find this information on our other website: [https://www.whoisextractor.in/](https://www.whoisextractor.in/ "Whoisextractor")
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+MIT License - see LICENSE file for details
+
+## Support
+
+For support, email support@domaindumper.com or open an issue in our GitHub repository.
+
+## Credits
+
+Data provided by [DomainDumper](https://www.domaindumper.com)

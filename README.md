@@ -1,11 +1,13 @@
-# Domain Statistics
+# DomainDumper
+
+[![npm version](https://badge.fury.io/js/domaindumper.svg)](https://www.npmjs.com/package/domaindumper)
 
 A JavaScript library for accessing domain registration statistics via the DomainDumper API.
 
 ## Installation
 
 ```bash
-npm install domain-statistics
+npm install domaindumper
 ```
 
 ## Features
@@ -17,14 +19,14 @@ npm install domain-statistics
 - Registrar-based statistics
 - TLD-based statistics
 
-## Quick Start
+## Usage
 
 ```javascript
 import { 
   getRegistrars, 
   getTldDetails, 
   getDomainStats 
-} from 'domain-statistics';
+} from 'domaindumper';
 
 // Get registrars list
 const registrars = await getRegistrars();
