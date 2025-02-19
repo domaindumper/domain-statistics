@@ -32,93 +32,109 @@ import {
   getRootDatabase
 } from 'domaindumper';
 
-// Get registrars information
+// Basic usage example
 const registrars = await getRegistrarsList();
-const registrarDetails = await getRegistrarsDetails();
-
-// Get TLD information
-const tldsList = await getTldsList();
-const comDetails = await getTldDetails('com');
+console.log(registrars);
 ```
 
 ## API Reference
 
-### Domain Service Methods
+### Registrar Operations
 
 ```javascript
-// Get list of registrars
-const registrars = await getRegistrars();
-
-// Get detailed TLD information
-const tldInfo = await getTldDetails('com');
-
-// Get domain statistics for specific date
-const stats = await getDomainStats('2024', '02', '19');
-console.log(stats.countryStats);    // Country-based statistics
-console.log(stats.registrarStats);  // Registrar-based statistics
-console.log(stats.tldStats);        // TLD-based statistics
-```
-
-## API Examples
-
-```javascript
-import { 
-  getRegistrars,
-  getRegistrarsDetails, 
-  getTldDetails,
-  getDomainStats,
-  getRootDatabase,
-  getTldsList 
-} from 'domaindumper';
-
-// Get registrars list
-const registrars = await getRegistrars();
+// Get basic registrar list
+const registrars = await getRegistrarsList();
+/* Response:
+{
+  "registrars": [
+    {
+      "id": 1,
+      "name": "Example Registrar",
+      "url": "https://example.com"
+    }
+  ]
+}
+*/
 
 // Get detailed registrar information
 const details = await getRegistrarsDetails();
+/* Response:
+{
+  "registrars": [
+    {
+      "id": 1,
+      "name": "Example Registrar",
+      "url": "https://example.com",
+      "details": {
+        // Additional registrar details
+      }
+    }
+  ]
+}
+*/
+```
 
-// Get TLD details
+### TLD Operations
+
+```javascript
+// Get list of all TLDs
+const tldsList = await getTldsList();
+/* Response:
+[
+  "com",
+  "net",
+  "org"
+]
+*/
+
+// Get specific TLD details
 const tldInfo = await getTldDetails('com');
-
-// Get domain statistics
-const stats = await getDomainStats('2024', '02', '19');
-console.log({
-  countryStats: stats.countryStats,     // Country-based statistics
-  registrarStats: stats.registrarStats, // Registrar-based statistics
-  tldStats: stats.tldStats             // TLD-based statistics
-});
+/* Response:
+{
+  "name": "com",
+  "type": "generic",
+  "manager": "VeriSign Global Registry Services",
+  "rootServers": [
+    "a.gtld-servers.net",
+    "b.gtld-servers.net"
+  ]
+}
+*/
 
 // Get root zone database
 const rootDb = await getRootDatabase();
-
-// Get all TLDs list
-const tldsList = await getTldsList();
+/* Response:
+[
+  {
+    "name": "com",
+    "type": "generic",
+    "manager": "VeriSign Global Registry Services"
+  }
+]
+*/
 ```
 
-### Response Examples
+### Statistics Operations
 
 ```javascript
-// Registrars response
+// Get domain statistics for specific date
+const stats = await getDomainStats('2024', '02', '19');
+/* Response:
 {
-  registrars: [
-    { id: 1, name: "Example Registrar", url: "https://example.com" }
-  ]
+  "countryStats": {
+    "US": 1000000,
+    "GB": 500000
+  },
+  "registrarStats": {
+    "1": 100000,
+    "2": 50000
+  },
+  "tldStats": {
+    "com": 2000000,
+    "net": 1000000
+  }
 }
-
-// TLD details response
-{
-  name: "com",
-  type: "generic",
-  manager: "VeriSign Global Registry Services",
-  rootServers: ["a.gtld-servers.net", "b.gtld-servers.net"]
-}
-
-// Domain stats response
-{
-  countryStats: { US: 1000000, GB: 500000 },
-  registrarStats: { "1": 100000, "2": 50000 },
-  tldStats: { com: 2000000, net: 1000000 }
-}
+*/
 ```
 
 ### Error Handling
@@ -137,77 +153,45 @@ try {
 
 ## Testing
 
-The package includes comprehensive tests. Here's an example of our test suite:
-
-```javascript
-import DomainService from '../services/DomainService';
-
-describe('DomainService', () => {
-  test('fetchRegistrars returns registrar data', async () => {
-    const data = await DomainService.fetchRegistrars();
-    expect(data).toBeDefined();
-  });
-
-  test('fetchTldDetails returns TLD information', async () => {
-    const data = await DomainService.fetchTldDetails('com');
-    expect(data).toBeDefined();
-  });
-
-  test('fetchDomainStats returns all stats types', async () => {
-    const stats = await DomainService.fetchDomainStats('2024', '02', '19');
-    expect(stats.countryStats).toBeDefined();
-    expect(stats.registrarStats).toBeDefined();
-    expect(stats.tldStats).toBeDefined();
-  });
-});
-```
-
-To run tests:
-
 ```bash
+# Run all tests
 npm test
+
+# Run tests with coverage
+npm test -- --coverage
 ```
 
 ## Development
 
-### Setup
 ```bash
-git clone https://github.com/yourusername/domain-statistics.git
-cd domain-statistics
+# Install dependencies
 npm install
-```
 
-### Building
-```bash
+# Build the package
 npm run build
+
+# Run tests
+npm test
 ```
 
-## Error Handling
+## API Documentation
 
-```javascript
-try {
-  const stats = await getDomainStats('2024', '02', '19');
-} catch (error) {
-  console.error('Error fetching domain stats:', error.message);
-}
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-MIT License - see LICENSE file for details
+Full API documentation is available at:
+- [API Documentation](https://statistics.domaindumper.com/api/v1)
+- [Swagger UI](https://statistics.domaindumper.com/api-docs)
 
 ## Support
 
-For support, email support@domaindumper.com or open an issue in our GitHub repository.
+- Documentation: [https://statistics.domaindumper.com/docs](https://statistics.domaindumper.com/docs)
+- Email: support@domaindumper.com
+- Issues: [GitHub Issues](https://github.com/domaindumper/domain-statistics/issues)
 
-## Credits
+## License
 
-Data provided by [DomainDumper](https://www.domaindumper.com)
+MIT License - see the [LICENSE](https://github.com/domaindumper/domain-statistics/blob/main/LICENSE) file for details.
+
+## Links
+
+- [NPM Package](https://www.npmjs.com/package/domaindumper)
+- [GitHub Repository](https://github.com/domaindumper/domain-statistics)
+- [Official Website](https://www.domaindumper.com)

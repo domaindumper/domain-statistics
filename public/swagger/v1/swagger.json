@@ -1,16 +1,16 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "We generate all possible states of domain registration, expiration, and deletion. We include the list of root registrar and root name server as well. These APIs are available for free use in any project. If you need premium services, then check our paid services at: [https://www.domaindumper.com](https://www.domaindumper.com)",
+    "description": "Domain registration statistics API providing information about registrars, TLDs, and domain statistics. Free for public use.",
     "version": "1.0",
-    "title": "Domain Statics API",
+    "title": "DomainDumper API",
     "termsOfService": "https://www.domaindumper.com/tos/",
     "contact": {
       "email": "support@domaindumper.com"
     },
     "license": {
-      "name": "Apache 2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
   },
   "host": "statistics.domaindumper.com",
@@ -18,56 +18,52 @@
   "tags": [
     {
       "name": "registrar",
-      "description": "Domain registrar operations",
-      "externalDocs": {
-        "description": "Find out more",
-        "url": "https://www.domaindumper.com"
-      }
+      "description": "Domain registrar operations"
     },
     {
       "name": "root",
-      "description": "Access TLD details"
+      "description": "TLD and root zone operations"
     },
     {
       "name": "stats",
-      "description": "stats of domains",
-      "externalDocs": {
-        "description": "Find out more about our store",
-        "url": "https://www.domaindumper.com"
-      }
+      "description": "Domain statistics operations"
     },
     {
       "name": "tlds",
-      "description": "All TLD List",
-      "externalDocs": {
-        "description": "List of all tlds",
-        "url": "https://www.domaindumper.com"
-      }
+      "description": "TLD list operations"
     }
   ],
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/registrar/registrars.json": {
       "get": {
-        "tags": [
-          "registrar"
-        ],
-        "summary": "get registrar list",
-        "description": "Get a complete list of registrar",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["registrar"],
+        "summary": "Get basic registrar list",
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Example Registrar"
+                  },
+                  "url": {
+                    "type": "string",
+                    "example": "https://example.com"
+                  }
+                }
+              }
             }
           }
         }
@@ -75,22 +71,31 @@
     },
     "/registrar/registrars-details.json": {
       "get": {
-        "tags": [
-          "registrar"
-        ],
-        "summary": "get registrar detailed list",
-        "description": "",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["registrar"],
+        "summary": "Get detailed registrar information",
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "details": {
+                    "type": "object"
+                  }
+                }
+              }
             }
           }
         }
@@ -98,249 +103,146 @@
     },
     "/root/db.json": {
       "get": {
-        "tags": [
-          "root"
-        ],
-        "summary": "Root TLD and gTLD list",
-        "description": "Its includes name, type, manager and detailed link",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["root"],
+        "summary": "Get root zone database",
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "manager": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           }
         }
       }
     },
-    "/root/detail/{TldName}/{TldName}.json": {
+    "/root/detail/{tldName}/{tldName}.json": {
       "get": {
-        "tags": [
-          "root"
-        ],
-        "summary": "Single TLD and gTLD full details",
-        "description": "Its includes name, type, manager, address and Root NS",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["root"],
+        "summary": "Get TLD details",
         "parameters": [
           {
-            "name": "TldName",
+            "name": "tldName",
             "in": "path",
-            "description": "Name of TLD. ",
-            "example": "com or net, See Complete list: https://statistics.domaindumper.com/api/v1/root/db.json",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "TLD name (e.g., com, net)",
+            "example": "com"
           }
         ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "manager": {
+                  "type": "string"
+                },
+                "rootServers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           },
           "404": {
-            "description": "tld name not correct",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
+            "description": "TLD not found"
           }
         }
       }
     },
-    "/stats/{Year}/{Month}/{Date}/country.json": {
+    "/stats/{year}/{month}/{date}/stats.json": {
       "get": {
-        "tags": [
-          "stats"
-        ],
-        "summary": "Country-based domain statistics",
-        "description": "The stats of domains based on countries",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["stats"],
+        "summary": "Get domain statistics",
         "parameters": [
           {
-            "name": "Year",
+            "name": "year",
             "in": "path",
-            "description": "Year in number",
-            "example": "2024 for current year",
             "required": true,
-            "type": "integer"
+            "type": "string",
+            "description": "Year (YYYY)",
+            "example": "2024"
           },
           {
-            "name": "Month",
+            "name": "month",
             "in": "path",
-            "description": "Month in number",
-            "example": "05 for May",
             "required": true,
-            "type": "integer"
+            "type": "string",
+            "description": "Month (MM)",
+            "example": "02"
           },
           {
-            "name": "Date",
+            "name": "date",
             "in": "path",
-            "description": "Date in number",
-            "example": "15",
             "required": true,
-            "type": "integer"
+            "type": "string",
+            "description": "Date (DD)",
+            "example": "19"
           }
         ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "object",
+              "properties": {
+                "countryStats": {
+                  "type": "object"
+                },
+                "registrarStats": {
+                  "type": "object"
+                },
+                "tldStats": {
+                  "type": "object"
+                }
+              }
             }
           },
           "404": {
-            "description": "failed operation",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          }
-        }
-      }
-    },
-    "/stats/{Year}/{Month}/{Date}/registrar.json": {
-      "get": {
-        "tags": [
-          "stats"
-        ],
-        "summary": "Registrar-based domain statistics",
-        "description": "The stats of domains based on Registrar-based",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Year",
-            "in": "path",
-            "description": "Year in number",
-            "example": "2024 for current year",
-            "required": true,
-            "type": "integer"
-          },
-          {
-            "name": "Month",
-            "in": "path",
-            "description": "Month in number",
-            "example": "05 for May",
-            "required": true,
-            "type": "integer"
-          },
-          {
-            "name": "Date",
-            "in": "path",
-            "description": "Date in number",
-            "example": "15",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          },
-          "404": {
-            "description": "failed operation",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          }
-        }
-      }
-    },
-    "/stats/{Year}/{Month}/{Date}/stats.json": {
-      "get": {
-        "tags": [
-          "stats"
-        ],
-        "summary": "TLD-based domain statistics",
-        "description": "The stats of domains based on TLD-based",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Year",
-            "in": "path",
-            "description": "Year in number",
-            "example": "2024 for current year",
-            "required": true,
-            "type": "integer"
-          },
-          {
-            "name": "Month",
-            "in": "path",
-            "description": "Month in number",
-            "example": "05 for May",
-            "required": true,
-            "type": "integer"
-          },
-          {
-            "name": "Date",
-            "in": "path",
-            "description": "Date in number",
-            "example": "15",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          },
-          "404": {
-            "description": "failed operation",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
+            "description": "Statistics not found"
           }
         }
       }
     },
     "/tlds/tlds_list.json": {
       "get": {
-        "tags": [
-          "tlds"
-        ],
-        "summary": "get registrars list",
-        "description": "Get a complete list of registrar",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "tags": ["tlds"],
+        "summary": "Get TLDs list",
+        "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         }
